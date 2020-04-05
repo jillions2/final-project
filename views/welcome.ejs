@@ -1,15 +1,37 @@
-<img class="wave" src="images/BG1.png" ></img>
-<div class="container">
-    <div class="img">
-        <img src="images/movie.svg"></img>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+    <script src="https://kit.fontawesome.com/3c9c1c2011.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <title>WELCOME</title>
+</head>
+<body >
+<img class="wave" src="/images/BG1.png" />  
+<div class="container" >
+  <div class="img" id="movie">
+    <img src="/images/Home_cinema.svg" />  
+  </div>
+  <div class="button-container">
+    <form action="welcome.ejs">
+      <div>
+        <h1>Broadway cinema</h1>
+      </div>
+      <div class="button">
+        <a href="/users/login" class="button-login" >Login</a>
+        <!-- <input class="button-login" type="button" value="Login"> -->
     </div>
-    <div class="login-register">
-        <div class="button">
-            <input class="button-login" type="button" value="Login">
-        </div>
-        <h6>-OR-</h6>
-        <div class="button">
-            <input class="button-register" type="button" value="Register">
-        </div>
+    <h6>-OR-</h6>
+    <div class="button">
+      <a href="/users/register" class="button-register" >Register</a>
+        <!-- <input class="button-register" type="button" value="Register"> -->
     </div>
+    </form>
+  </div>
 </div>
+</body>
+</html>

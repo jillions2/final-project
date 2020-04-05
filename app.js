@@ -15,6 +15,10 @@ app.use(index)
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
+//css
+app.use('/assets', express.static('assets'))
+
+
 // middleware section
 
 app.use(express.urlencoded( {extended: false} ))
@@ -23,6 +27,9 @@ app.use(express.urlencoded( {extended: false} ))
 //Routes
 app.use('/',require('./routes/index'));
 app.use('/users',require('./routes/users'));
+
+//img
+app.use( express.static( "public" ) );
 
 
 const PORT = process.env.PORT || 5000;

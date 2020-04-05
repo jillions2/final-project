@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    /* background-color: #e6244b; */
+    
+}
+.wave{
+    position: fixed;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem;
+    padding: 0 2rem;
+}
+
+.img{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.img #movie{
+    width: 500px;
+}
+
+.button-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+form{
+    width: 360px;
+    background-color: #e6244b;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: #fafafa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+form h6{
+    font-size: 15px;
+    color:  #fafafa;;
+
+}
+
+.button-login{
+    align-items: center;
+    display: block;
+    width: 90%;
+    height: 50px;
+    border-radius: 20px;
+    margin: 1rem ;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right,#ffd253,#ffda73,#e6244b);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: #e6244b;
+    background-size: 200%;
+    transition: .5s ;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.button-register{
+    align-items: center;
+    display: block;
+    width: 90%;
+    height: 50px;
+    border-radius: 20px;
+    margin: 1rem ;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right,#ffd253,#ffda73,#e6244b);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: #e6244b;
+    background-size: 200%;
+    transition: .5s ;
+    text-decoration: none;
+    padding: 10px;
+    
+
+}
+
+.button-login:hover{
+    background-position: right;
+    color: #fafafa;
+}
+.button-register:hover{
+    background-position: right;
+    color: #fafafa;
+}
+
+
