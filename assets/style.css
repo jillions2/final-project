@@ -10,7 +10,8 @@ body{
 }
 .wave{
     position: fixed;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     left: 0;
     bottom: 0;
     z-index: -1;
@@ -40,11 +41,14 @@ body{
     align-items: center;
     text-align: center;
 }
+.logo{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 
 
 form{
-    width: 360px;
+    width: 400px;
     background-color: #e6244b;
     border-radius: 20px;
     text-transform: uppercase;
@@ -55,7 +59,7 @@ form{
 
 form h6{
     font-size: 15px;
-    color:  #fafafa;;
+    color:  #fafafa;
 
 }
 
@@ -69,7 +73,7 @@ form h6{
     font-size: 1.2rem;
     outline: none;
     border: none;
-    background-image: linear-gradient(to right,#ffd253,#ffda73,#e6244b);
+    background-image: linear-gradient(to left,#7ad3b9,#ffd253,#ffda73);
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
@@ -90,7 +94,7 @@ form h6{
     font-size: 1.2rem;
     outline: none;
     border: none;
-    background-image: linear-gradient(to right,#ffd253,#ffda73,#e6244b);
+    background-image: linear-gradient(to left,#7ad3b9,#ffd253,#ffda73);
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
