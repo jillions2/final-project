@@ -42,7 +42,9 @@ body{
     text-align: center;
 }
 .logo{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 80%;
+    height: 80%;
+    align-self: center;
 }
 
 
@@ -59,7 +61,7 @@ form{
 
 form h6{
     font-size: 15px;
-    color:  #fafafa;
+    color:  #fafafa;;
 
 }
 
