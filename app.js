@@ -21,6 +21,8 @@ require('./config/passport')(passport);
 //const index = require('./routes/index')
 //app.use(index)
 
+//img
+app.use( express.static( "public" ) );
 
 //EJS
 app.use(expressLayouts);
