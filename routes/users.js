@@ -9,7 +9,6 @@ const passport = require('passport');
 const User =require('../models/User');
 
 
-
 //login Page
 router.get('/login',(req,res) => res.render('login'));
 
