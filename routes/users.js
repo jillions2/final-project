@@ -16,6 +16,13 @@ router.get('/login',(req,res) => res.render('login'));
 //Register Page
 router.get('/register',(req,res) => res.render('register'));
 
+// Booing Page
+router.get('/listBooking',(req,res) => res.render('listBooking'));
+
+
+// movie Page
+router.get('/movie',(req,res) => res.render('movie'));
+
 //Register Handle
 router.post('/register',(req,res) =>{ 
   
@@ -101,5 +108,8 @@ router.get('/logout', (req, res) => {
   req.flash('success_msg', 'You are logged out');
   res.redirect('/users/login');
 });
+
+
+
 
 module.exports = router;

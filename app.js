@@ -7,6 +7,7 @@ const passport = require('passport');
 
 
 
+
 const app = express();
 
 //css
@@ -54,8 +55,13 @@ app.use((req,res,next) =>{
 
 
 //Routes
+
 app.use('/',require('./routes/index'));
 app.use('/users',require('./routes/users'));
+
+app.use('/index',require('./routes/index'));
+
+
 
 
 const PORT = process.env.PORT || 3030;
