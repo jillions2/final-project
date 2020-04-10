@@ -31,8 +31,8 @@
         <h1 class="text-center mb-3" id="logo">
           <i class="fas fa-user-plus"></i> add
         </h1>
-        
-        <form action="/add" method="POST">
+        <%- include('partials/messages'); -%>
+        <form action="/users/login" method="POST">
           <div class="form-group">
             <label for="name">title</label>
             <input
@@ -41,7 +41,7 @@
               name="name"
               class="form-control"
               placeholder="Enter Name"
-              
+              value="<%= typeof name != 'undefined' ? name : '' %>"
             />
           </div>
           <div class="form-group">
@@ -52,7 +52,7 @@
               name="body"
               class="form-control"
               placeholder="Enter body"
-             
+              value="<%= typeof email != 'undefined' ? email : '' %>"
             />
           </div>
           
