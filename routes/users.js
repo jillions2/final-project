@@ -8,20 +8,28 @@ const passport = require('passport');
 //User model
 const User =require('../models/User');
 
+const Article =require('../models/article');
+
 
 
 //login Page
 router.get('/login',(req,res) => res.render('login'));
 
+//Our Team Page
+router.get('/team',(req,res) => res.render('Team'));
+
 //Register Page
 router.get('/register',(req,res) => res.render('register'));
 
-// Booing Page
+// listBooing Page
 router.get('/listBooking',(req,res) => res.render('listBooking'));
 
 
 // movie Page
 router.get('/movie',(req,res) => res.render('movie'));
+
+
+
 
 //Register Handle
 router.post('/register',(req,res) =>{ 

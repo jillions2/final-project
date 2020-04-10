@@ -2,12 +2,6 @@ const express = require('express');
 const router = express.Router();
 const { ensureAuthenticated } = require('../config/auth');
 
-
-
-
-
-
-
 //welcome Page
 router.get('/',(req,res) => res.render('welcome'));
 //Dashboard
@@ -17,51 +11,20 @@ router.get('/dashboard',ensureAuthenticated ,(req,res) =>
      email:req.user.email ,
 
  }));
-
- 
-
-
- // Bring in Articles Models
-const Article = require('../models/article');
+//addBooking
+router.get('/add',(req,res) => res.render('addBooking'));
 
 
-
-//Add Route
-router.get('/add', ensureAuthenticated,function(req,res){
-  res.render('addBooking');
-});
-
-  //req.checkBody('author','Auth
-//Add Sumit Post Route
-const { check, validationResult } = require('express-validator');
-
-router.post('/add',
-  [
-    check('title', 'l is not valid').isEmpty(),
-    check('body', ' field is required').not().isEmpty(),
-    
-  ], 
-  function(req, res, next) {
-
-  // Check Errors
-  const errors = validationResult(req);
-  if (errors) {
-    console.log(errors);
-    res.render('addBooking', { errors: errors.array() });
-  }
-  else {
-    console.log('No Errors');
-    res.render('/add', { message: 'Successful' });
-  }
-});
- 
-  /*router.post('/add', (req,res,next) => {
-     
+router.post('/add',(req,res) =>{ 
   
-    res.redirect('/users/listBooking');
-  });*/
+    const { title,body } = req.body;
+    let errors = [];
+  
+    if (!title || !body ) {
+      errors.push({ msg: 'Please enter all fields' });
+    }
 
-
+});
 
 
 // MongoDB Atlas connection setting
