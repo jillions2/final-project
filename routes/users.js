@@ -28,6 +28,8 @@ router.get('/listBooking',(req,res) => res.render('listBooking'));
 // movie Page
 router.get('/movie',(req,res) => res.render('movie'));
 
+router.post('/listBooking',(req,res) => res.render('listBooking'));
+
 
 
 
