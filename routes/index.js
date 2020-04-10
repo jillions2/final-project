@@ -11,20 +11,50 @@ router.get('/dashboard',ensureAuthenticated ,(req,res) =>
      email:req.user.email ,
 
  }));
+
+ //Dashboard
+router.get('/listBooking',ensureAuthenticated ,(req,res) =>
+res.render('listBooking',{
+    name: req.article.title ,
+    email:req.article.name ,
+
+}));
 //addBooking
 router.get('/add',(req,res) => res.render('addBooking'));
+router.post('/add',(req,res) =>{
+  const { title,body } = req.body;
+  const  newArticle = new  Article({
+    title,
+    body,
+  });
+  newArticle.save()
+    
+  console.log(newArticle)
+ // res.send('hello')
+  res.redirect('/users/listBooking')
+
+} );
+
+//router.post('/add',(req,res) => res.render('addBooking'));
+
+const Article =require('../models/article');
+
+/*router.post('/add',(req,res) => {
+  const { title,body } = req.body;
+  const  newArticle = new  Article({
+    title,
+    body,
+  });
+  //Save user
+  newArticle.save();
+  req.flash('success_msg','You are  in');
+  res.redirect('/add');
+
+})*/
 
 
-router.post('/add',(req,res) =>{ 
-  
-    const { title,body } = req.body;
-    let errors = [];
-  
-    if (!title || !body ) {
-      errors.push({ msg: 'Please enter all fields' });
-    }
 
-});
+
 
 
 // MongoDB Atlas connection setting
