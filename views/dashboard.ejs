@@ -1,33 +1,72 @@
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/assets/style_dashboard.css" />
+  <title>Document</title>
+</head>
+<body>
+  <img class="wave" src="/images/BG5.png" /> 
+  <br>
+  <div class="container-fluid" alt="Max-width 100%" >
+    <nav class="navbar navbar-expand-sm " style="background-color: #fafafa;" id="head_navbar" >
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"">
+          <li class="nav-item">
+              <a class="nav-link" href="/dashboard">Your Profile</a>
+            </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/users/movie">Movie <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add">Booking</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/users/listBooking"> List Booking</a>
+            </li>
+          
+        </ul>
+        <a href="/users/logout" class="btn btn-secondary" id="btn">Logout</a>
+      </div>
+    </nav>
+  </div>
+  <br>
+  <div class="jumbotron" style="padding: 0%" >
+    <img class="ad" src="/images/ad4.png" /> 
+  </div>
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="/dashboard">Your Profile</a>
-          </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="/users/movie">Movie <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/add">Booking</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/users/listBooking"> list Booking</a>
-          </li>
-        
-      </ul>
-      <a href="/users/logout" class="btn btn-secondary">Logout</a>
+  <div class="container" style="margin-top:10px padding:10px" id="Profile">
+    <div class="row">
+      <div class="col-sm-4" style="background-color: #7ad3b9;">
+        <h1 class="mt-4" id="head_text" >Profile</h1>
+        <h3>Welcome !!</h3>
+        <img class="mx-auto d-block" src="/images/profile3.png"  width="100%"  /> 
+        <h4 class="lead mb-3">Name : <%= name %></h4>
+        <h4 class="lead mb-3">Email : <%= email %></h4>
+          <hr class="d-sm-none">
+      </div>
+      <div class="col-sm-8" style="background-color: #fafafa;">
+        <p>
+          <br>
+          <br>
+          Please write your content.
+        </p>
+      </div>
     </div>
-  </nav>
+  </div>
 
-  
 
-<h1 class="mt-4">Profile</h1>
-<p class="lead mb-3">Welcome <%= name %><br><%= email %></p>
+  <!-- <div  class="container-fluid" id="content">
+    <br>
+    <h1 class="mt-4" id="head_text" >Profile</h1>
+    <p class="lead mb-3">
+      <h3>Welcome !!</h3>
+      <img class="float" src="/images/profile3.png" height="30%" width="30%" /> 
+      <br>
+      <%= name %><br><%= email %></p>
+</div> -->
 
-   
+</body>
+</html>
