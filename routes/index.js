@@ -15,17 +15,17 @@ router.get('/dashboard',ensureAuthenticated ,(req,res) =>
  //Dashboard
 router.get('/listBooking',ensureAuthenticated ,(req,res) =>
 res.render('listBooking',{
-    name: req.article.title ,
-    email:req.article.name ,
+    name: req.article.namemovie ,
+    email:req.article.price ,
 
 }));
 //addBooking
 router.get('/add',(req,res) => res.render('addBooking'));
 router.post('/add',(req,res) =>{
-  const { title,body } = req.body;
+  const { namemovie,price } = req.body;
   const  newArticle = new  Article({
-    title,
-    body,
+    namemovie,
+    price,
   });
   newArticle.save()
     
@@ -37,7 +37,7 @@ router.post('/add',(req,res) =>{
 
 //router.post('/add',(req,res) => res.render('addBooking'));
 
-const Article =require('../models/article');
+const Article =require('../models/movieBooking');
 
 /*router.post('/add',(req,res) => {
   const { title,body } = req.body;

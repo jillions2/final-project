@@ -2,12 +2,12 @@ let mongoose = require('mongoose');
 
 // Article Schema
 let articleSchema = mongoose.Schema({
-  title:{
+  namemovie:{
     type: String,
     required: true
   },
 
-  body:{
+  price:{
     type: String,
     required: true
   }

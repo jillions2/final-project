@@ -46,11 +46,11 @@
        
         <form action="/add" method="POST">
           <div class="form-group">
-            <label for="name">title</label>
+            <label for="name">Name Of Movie</label>
             <input
               type="name"
-              id="title"
-              name="title"
+              id="namemovie"
+              name="namemovie"
               class="form-control"
               placeholder="Enter Name"
               required
@@ -58,19 +58,20 @@
             />
           </div>
           <div class="form-group">
-            <label for="email">body</label>
+            <label for="detail"> Price</label>
+           
             <input
-              type="name"
-              id="body"
-              name="body"
+              type="number"
+              id="price"
+              name="price"
               class="form-control"
-              placeholder="Enter body"
+              placeholder="Enter Price"
               required
               
             />
           </div>
           <br>
-          <button id="btn_add" type="submit" class="btn btn-primary btn-block" >Submit</button>
+          <button id="btn_add" type="submit" class="btn btn-primary btn-block" >Add Booking</button>
         </form>
         
       </div>
