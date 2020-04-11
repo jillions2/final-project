@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 
 // Article Schema
-let articleSchema = mongoose.Schema({
+let movieSchema = mongoose.Schema({
   namemovie:{
     type: String,
     required: true
@@ -13,5 +13,5 @@ let articleSchema = mongoose.Schema({
   }
 });
 
-const Article = module.exports = mongoose.model('Article', articleSchema);
-module.exports = Article;
+const MovieBooking = module.exports = mongoose.model('MovieBooking', movieSchema);
+module.exports = MovieBooking;

@@ -9,31 +9,29 @@ router.get('/dashboard',ensureAuthenticated ,(req,res) =>
  res.render('dashboard',{
      name: req.user.name ,
      email:req.user.email ,
+     password:req.user.password ,
+     namemovie: req.user.namemovie
 
  }));
+ const MovieBooking =require('../models/movieBooking');
 
- //Dashboard
-router.get('/listBooking',ensureAuthenticated ,(req,res) =>
-res.render('listBooking',{
-    name: req.article.namemovie ,
-    email:req.article.price ,
-
-}));
 //addBooking
 router.get('/add',(req,res) => res.render('addBooking'));
 router.post('/add',(req,res) =>{
   const { namemovie,price } = req.body;
-  const  newArticle = new  Article({
+  const  newMovie = new  MovieBooking({
     namemovie,
     price,
   });
-  newArticle.save()
+  newMovie.save()
     
-  console.log(newArticle)
+  console.log(newMovie)
  // res.send('hello')
   res.redirect('/users/listBooking')
 
 } );
+
+
 
 //router.post('/add',(req,res) => res.render('addBooking'));
 
